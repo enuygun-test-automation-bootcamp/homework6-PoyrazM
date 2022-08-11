@@ -32,20 +32,10 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "(//a[text()='Register'])[2]")
     private WebElement registerIcon;
 
-
-
-
-    By imageBox = By.cssSelector(".tt-image-box");
-    By favorites = By.cssSelector("div[data-tooltip=\"Favorites\"]");
-    By titleOfWish = By.xpath("//*/h2[@class='tt-title']");
-    By titleOfResWish = By.xpath("//*/h2[@class='tt-title']");
-
-
     public void selectChocolateFromCakesDropDown(){
         elementHelper.hasanHocanınHoverMoverı(this.cakesForDropdown);
         this.chocolateButton.click();
     }
-
 
     public void clickToMyAccountIcon(){
         this.myAccountIcon.click();
