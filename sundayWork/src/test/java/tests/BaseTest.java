@@ -3,11 +3,23 @@ package tests;
 import com.github.javafaker.Faker;
 import framework.ConfigReader;
 import framework.DriverSetup;
-import org.junit.After;
+import io.qameta.allure.Allure;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import pages.*;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class BaseTest {
     public static WebDriver driver;
@@ -37,12 +49,12 @@ public class BaseTest {
         this.registerPage = new RegisterPage();
     }
 
-    @AfterClass
+
+
+    @AfterSuite
     void tearDown(){
         if (driver != null){
-            driver.close();
             driver.quit();
-            driver = null;
         }
     }
 }
