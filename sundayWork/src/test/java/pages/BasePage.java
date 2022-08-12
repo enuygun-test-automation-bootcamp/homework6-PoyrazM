@@ -15,6 +15,7 @@ public class BasePage {
     public static WebDriverWait wait;
     public static JavascriptExecutor jse;
 
+    // Base Page sadece yapıcı döndürmek için kurulmuştur.
     public BasePage(){
         PageFactory.initElements(driver, this);
         elementHelper = new Helper(driver);

@@ -37,7 +37,7 @@ public class BaseTest {
     }
 
 
-
+// Burası benim parent test classım
     @BeforeClass
     void setup(){
         driver = DriverSetup.initialize_Driver(ConfigReader.initialize_Properties().get("browser").toString());

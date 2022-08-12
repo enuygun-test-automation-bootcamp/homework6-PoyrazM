@@ -8,8 +8,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AddToChocolateWishListTestNG extends BaseTest{
+// Dropdowndan pasta kısmı açılıp oradan çikolata seçip , bulunan sonuçlardaki juventus pastasını istek listesine ekleyerek
+    // Oraya gerçekten gitti mi kontrolünün yapıldığı test
 
-
+    // Burada pasta kısmından çikolatalı pasta seçilir.
     @Test(priority = 1)
     @AllureId("11")
     @Description("User move to mouse on the dropdown and selects chocolate under the CAKES")
@@ -18,6 +20,7 @@ public class AddToChocolateWishListTestNG extends BaseTest{
         homePage.selectChocolateFromCakesDropDown();
     }
 
+    // Çikolatalı pasta seçimi sonrası dönen sonuçlardan sonra Juventus pastası seçilir.
     @Test(priority = 2)
     @AllureId("22")
     @Description("User checks and selects Cake Juventus")
@@ -26,6 +29,7 @@ public class AddToChocolateWishListTestNG extends BaseTest{
         productsListPage.selectCakeItem();
     }
 
+    // Juventus pastası seçildikten sonra istek listesine eklenir
     @Test(priority = 3)
     @AllureId("33")
     @Description("User check add wish list button under the  Cake Juventus , and clicks the this icon")
@@ -34,6 +38,7 @@ public class AddToChocolateWishListTestNG extends BaseTest{
         productPage.addToWishList();
     }
 
+    // İstek listesi sayfasına gitmek için gereken butona tıklar
     @Test(priority = 4)
     @AllureId("44")
     @Description("User wants to add wish list page , so checks and clicks to wish list icon")
@@ -42,7 +47,7 @@ public class AddToChocolateWishListTestNG extends BaseTest{
         productPage.goToWishList();
     }
 
-
+    // İstek listesinde seçilen ürünün title'ı kontrol edilip , doğrulama yapılır.
     @Test(priority = 5)
     @AllureId("55")
     @Description("User checks the cart page title and user validates to true cake")

@@ -17,10 +17,6 @@ public class ConfigReader {
     public static Map initialize_Properties() {
         properties = new Yaml();
 
-        /*File config = new File("sundayWork/src/test/resources/file");
-        File yamlFile = new File(config,"config.yaml");*/
-
-
         try {
             FileInputStream fileInputStream = new FileInputStream("./src/test/resources/file/config.yaml");
             data = properties.load(fileInputStream);

@@ -10,6 +10,8 @@ import tests.BaseTest;
 
 public class TestAllureListeners implements ITestListener {
 
+    // Listener ekleyerek testim fail olduğu zaman ekran görüntüsü almasını beklerim.
+
     public void onTestFailure(ITestResult result) {
         saveScreenShotOnFailure(BaseTest.driver);
         saveLogs(result.getMethod().getConstructorOrMethod().getName());
